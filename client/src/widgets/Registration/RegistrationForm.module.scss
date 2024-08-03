@@ -1,0 +1,27 @@
+.registration-form {
+  width: 500px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 4px;
+  margin: 0 auto;
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.432);
+  box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.498);
+  background-color: rgb(247, 249, 255);
+}
+
+.error-box {
+  color: red;
+  height: 0px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.error-box--open {
+  color: red;
+  height: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+}

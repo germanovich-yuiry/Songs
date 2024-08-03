@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+.container {
+  display: inline-block;
+  max-width: 48px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 24px;
+  border-radius: 16px;
+  background-color: $blue;
+  padding: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.switcher::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $white;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+input[type="checkbox"]:checked ~ .switcher {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 24px;
+  border-radius: 16px;
+  background-color: $inverse-blue;
+  padding: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .switcher::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $default;
+  transition: transform 0.3s;
+  z-index: 1;
+  transform: translate(24px);
+  transform-origin: left;
+}

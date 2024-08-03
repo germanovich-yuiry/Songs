@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.container-margin {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.container-switcher {
+  align-self: flex-end;
+  margin-top: 50px;
+}

@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+
+.container-margin {
+  display: flex;
+  justify-content: center;
+}
+
+.container-centred {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 0 auto;
+  width: 935px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 140px;
+}
+
+.button {
+  color: $inverse-greyLightest;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  &:hover {
+    color: $grey;
+  }
+}
+
+.exit {
+  position: relative;
+  align-self: flex-start;
+  &::before {
+    position: absolute;
+    left: -25px;
+    content: "";
+    display: block;
+    width: 15px;
+    height: 14px;
+    background-image: url(../../assets/icons/exit.svg);
+  }
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+}
+
+.add-button {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  right: 40%;
+  left: 40%;
+  background-color: $white;
+  border-radius: 50%;
+  &::before {
+    position: absolute;
+    right: -30px;
+    bottom: 50px;
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../assets/icons/plus-circle.svg);
+    background-color: $white;
+    border-radius: 50%;
+    border: solid 10px $white;
+    z-index: 4;
+    cursor: pointer;
+  }
+}
+
+.form-container {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 25px 20px;
+  border-radius: 10px;
+  border: solid 1px $greyLight;
+}
